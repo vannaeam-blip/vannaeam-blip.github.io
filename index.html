@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <title>lift4peach | Training & Nutrition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --pastel-peach: #fce1d1;
+            --pastel-accent: #e9a68a;
+            --soft-white: #ffffff;
+            --pastel-grey: #8e8e8e; 
+        }
+
+        body { 
+            background-color: #fffaf7; 
+            color: #5a5a5a; 
+            font-family: 'Inter', sans-serif; 
+            margin: 0; 
+        }
+
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+        /* Shaking Animation for the Peach */
+        @keyframes shakePeach {
+            0% { transform: rotate(0deg); }
+            25% { transform: rotate(5deg); }
+            50% { transform: rotate(0deg); }
+            75% { transform: rotate(-5deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        @keyframes fadeInSlideUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes staggeredFade {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-hero { animation: fadeInSlideUp 1.8s ease-out forwards; }
+        
+        .peach-shake {
+            display: inline-block;
+            animation: shakePeach 0.6s ease-in-out infinite;
+            filter: sepia(0.3) saturate(0.8) hue-rotate(-15deg) brightness(1.1);
+            margin-right: 8px; 
+        }
+
+        .animate-history { 
+            opacity: 0;
+            animation: staggeredFade 1.2s ease-out forwards;
+            animation-delay: 0.8s; 
+        }
+
+        .hero-section {
+            position: relative;
+            width: 100%;
+            height: 85vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('background.jpg') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .text-shadow-hero {
+            text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.6);
+        }
+
+        .insta-btn:hover {
+            transform: scale(1.05);
+            background-color: var(--pastel-peach);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero-section">
+        <div class="relative z-10 px-4 animate-hero">
+            <h1 class="text-6xl md:text-9xl font-bold text-white text-shadow-hero italic tracking-tight">
+                Sculpt Your <span class="peach-shake">🍑</span>,
+            </h1>
+            <h1 class="text-6xl md:text-9xl font-bold text-white text-shadow-hero mt-2 italic tracking-tight">
+                Lift Your Life
+            </h1>
+            <p class="text-2xl md:text-4xl mt-8 text-white font-bold tracking-widest text-shadow-hero uppercase">
+                Training & Nutrition for the Modern Woman
+            </p>
+        </div>
+    </header>
+
+    <section class="py-24 px-6 bg-[#fdf2ed]">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
+            <div class="w-full md:w-2/5 flex justify-center">
+                <img src="coach.png" class="w-full h-auto max-h-[600px] object-contain rounded-[60px] shadow-2xl border-4 border-white" alt="Coach Ivanna">
+            </div>
+            <div class="flex-1">
+                <h2 class="text-5xl md:text-6xl font-bold text-[#e9a68a] mb-6 italic animate-history" style="animation-delay: 0.4s;">The Woman Behind the Brand</h2>
+                <div class="w-24 h-1 bg-[#fce1d1] mb-8 animate-history" style="animation-delay: 0.5s;"></div>
+                <p class="text-xl font-bold text-gray-700 mb-6 uppercase tracking-[0.2em] animate-history" style="animation-delay: 0.6s;">
+                    IFBB Wellness Champion • Fitness Mentor
+                </p>
+                <div class="space-y-6 text-xl leading-relaxed italic animate-history" style="color: var(--pastel-grey);">
+                    <p>Born in the vibrant heart of <strong>Argentina</strong> and now calling the sunny shores of <strong>Florida, USA</strong> my home, my journey has been one of discipline and transformation.</p>
+                    <p>As an <strong>IFBB Wellness Champion of Buenos Aires</strong>, I have mastered the art of sculpting the female physique through science and soul.</p>
+                    <p>Now, I dedicate my life to helping women worldwide find their most radiant version. Whether you are aiming for the <strong>stage</strong> or for your <strong>best life</strong>, I am here to lead you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 bg-white">
+        <h2 class="text-5xl font-bold text-center text-[#fce1d1] mb-20 italic">Select Your Program</h2>
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+            <div class="p-12 bg-white rounded-[40px] border border-orange-100 shadow-sm transition-transform hover:scale-105">
+                <h3 class="text-3xl font-bold mb-6">Online Coaching</h3>
+                <p class="text-6xl font-bold mb-8 text-[#fce1d1]">$300<span class="text-xl text-gray-300">/mo</span></p>
+                <ul class="space-y-4 mb-12 text-lg text-gray-500">
+                    <li>🍑 Personalized workout programming</li>
+                    <li>🍑 Custom nutrition strategy</li>
+                    <li>🍑 24/7 direct messaging</li>
+                </ul>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeJezaYh8zSdqeSnpwo3j24mQtTydxyRhsNx20S7xmfcdYUOA/viewform" target="_blank" class="block w-full py-5 bg-[#fdf2ed] text-center rounded-2xl font-bold text-gray-700 hover:bg-[#fce1d1] transition-all uppercase tracking-widest">Get Started</a>
+            </div>
+            <div class="p-12 bg-white rounded-[40px] border-2 border-[#fce1d1] shadow-xl transition-transform hover:scale-105 relative">
+                <div class="absolute -top-4 right-10 bg-[#fce1d1] text-white px-6 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Most Popular</div>
+                <h3 class="text-3xl font-bold mb-6">Hybrid Coaching</h3>
+                <p class="text-6xl font-bold mb-8 text-[#fce1d1]">$349<span class="text-xl text-gray-300">/mo</span></p>
+                <ul class="space-y-4 mb-12 text-lg text-gray-500">
+                    <li>🍑 1 in-person session/month</li>
+                    <li>🍑 Data-driven progress tracking</li>
+                    <li>🍑 Advanced athlete transition</li>
+                </ul>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeJezaYh8zSdqeSnpwo3j24mQtTydxyRhsNx20S7xmfcdYUOA/viewform" target="_blank" class="block w-full py-5 bg-[#fce1d1] text-white text-center rounded-2xl font-bold hover:bg-[#e9a68a] transition-all uppercase tracking-widest">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 text-center border-t bg-white">
+        <img src="logo.png" class="max-w-[200px] mx-auto mb-10" alt="logo">
+        <div class="mb-10">
+            <p class="text-gray-400 mb-4 italic tracking-wide">Connect with me</p>
+            <a href="https://www.instagram.com/vanna.eam" target="_blank" class="insta-btn inline-flex items-center px-10 py-4 bg-white border-2 border-[#fce1d1] text-[#e9a68a] rounded-full font-bold uppercase tracking-[0.2em] transition-all shadow-sm">
+                <i class="fab fa-instagram text-2xl mr-3"></i> @vanna.eam
+            </a>
+        </div>
+        <p class="text-xs text-gray-400 uppercase tracking-[0.4em]">Built for Strength • Argentina Roots • Florida Based</p>
+        <p class="text-[10px] text-gray-300 mt-6 tracking-widest">© 2026 LIFT4PEACH. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+</body>
+</html>
