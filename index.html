@@ -23,11 +23,11 @@
             color: #5a5a5a; 
             font-family: 'Inter', sans-serif; 
             margin: 0; 
+            overflow-x: hidden;
         }
 
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
 
-        /* Shaking Animation for the Peach */
         @keyframes shakePeach {
             0% { transform: rotate(0deg); }
             25% { transform: rotate(5deg); }
@@ -77,6 +77,11 @@
             text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.6);
         }
 
+        .text-justify-custom {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
         .insta-btn:hover {
             transform: scale(1.05);
             background-color: var(--pastel-peach);
@@ -87,76 +92,145 @@
 <body>
 
     <header class="hero-section">
-        <div class="relative z-10 px-4 animate-hero">
-            <h1 class="text-6xl md:text-9xl font-bold text-white text-shadow-hero italic tracking-tight">
+        <div class="relative z-10 px-6 animate-hero">
+            <h1 class="text-5xl md:text-9xl font-bold text-white text-shadow-hero italic tracking-tight leading-tight">
                 Sculpt Your <span class="peach-shake">🍑</span>,
             </h1>
-            <h1 class="text-6xl md:text-9xl font-bold text-white text-shadow-hero mt-2 italic tracking-tight">
+            <h1 class="text-5xl md:text-9xl font-bold text-white text-shadow-hero mt-2 italic tracking-tight leading-tight">
                 Lift Your Life
             </h1>
-            <p class="text-2xl md:text-4xl mt-8 text-white font-bold tracking-widest text-shadow-hero uppercase">
+            <p class="text-lg md:text-4xl mt-8 text-white font-bold tracking-widest text-shadow-hero uppercase text-center">
                 Training & Nutrition for the Modern Woman
             </p>
         </div>
     </header>
 
-    <section class="py-24 px-6 bg-[#fdf2ed]">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
+    <section class="py-16 md:py-24 px-6 bg-[#fdf2ed]">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16">
             <div class="w-full md:w-2/5 flex justify-center">
-                <img src="coach.png" class="w-full h-auto max-h-[600px] object-contain rounded-[60px] shadow-2xl border-4 border-white" alt="Coach Ivanna">
+                <img src="coach.png" class="w-3/4 md:w-full h-auto max-h-[600px] object-contain rounded-[40px] md:rounded-[60px] shadow-2xl border-4 border-white" alt="Coach Ivanna">
             </div>
-            <div class="flex-1">
-                <h2 class="text-5xl md:text-6xl font-bold text-[#e9a68a] mb-6 italic animate-history" style="animation-delay: 0.4s;">The Woman Behind the Brand</h2>
-                <div class="w-24 h-1 bg-[#fce1d1] mb-8 animate-history" style="animation-delay: 0.5s;"></div>
-                <p class="text-xl font-bold text-gray-700 mb-6 uppercase tracking-[0.2em] animate-history" style="animation-delay: 0.6s;">
-                    IFBB Wellness Champion • Fitness Mentor
+            <div class="flex-1 text-center md:text-left">
+                <h2 class="text-4xl md:text-6xl font-bold text-[#e9a68a] mb-6 italic animate-history" style="animation-delay: 0.4s;">The Woman Behind the Brand</h2>
+                <div class="w-16 md:w-24 h-1 bg-[#fce1d1] mb-8 mx-auto md:mx-0 animate-history" style="animation-delay: 0.5s;"></div>
+                <p class="text-sm md:text-lg font-bold text-gray-700 mb-6 uppercase tracking-[0.2em] animate-history" style="animation-delay: 0.6s;">
+                    IFBB Wellness Champion • Licensed Psychologist • Certified Coach
                 </p>
-                <div class="space-y-6 text-xl leading-relaxed italic animate-history" style="color: var(--pastel-grey);">
-                    <p>Born in the vibrant heart of <strong>Argentina</strong> and now calling the sunny shores of <strong>Florida, USA</strong> my home, my journey has been one of discipline and transformation.</p>
-                    <p>As an <strong>IFBB Wellness Champion of Buenos Aires</strong>, I have mastered the art of sculpting the female physique through science and soul.</p>
-                    <p>Now, I dedicate my life to helping women worldwide find their most radiant version. Whether you are aiming for the <strong>stage</strong> or for your <strong>best life</strong>, I am here to lead you.</p>
+                <div class="space-y-6 text-lg md:text-xl leading-relaxed italic animate-history text-justify-custom" style="color: var(--pastel-grey); animation-delay: 0.7s;">
+                    <p>Born in the vibrant heart of <strong>Argentina</strong> and now based on the sunny shores of <strong>Florida</strong>, my path has been defined by 15 years of athletic discipline and 6 years of elite competition.</p>
+                    
+                    <p>As an <strong>IFBB Wellness Champion</strong> and a <strong>Licensed Psychologist</strong>, I understand that true transformation starts where the mind and body meet. I don't just build physiques; I help you navigate the mental shifts required to sustain excellence.</p>
+                    
+                    <p>I am a <strong>Certified Personal Trainer and Nutrition Coach</strong> dedicated to guiding you through a journey of science and soul. I am here to walk beside you as you reclaim your strength, refine your mindset, and unveil your most radiant version.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-24 px-6 bg-white">
-        <h2 class="text-5xl font-bold text-center text-[#fce1d1] mb-20 italic">Select Your Program</h2>
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-            <div class="p-12 bg-white rounded-[40px] border border-orange-100 shadow-sm transition-transform hover:scale-105">
-                <h3 class="text-3xl font-bold mb-6">Online Coaching</h3>
-                <p class="text-6xl font-bold mb-8 text-[#fce1d1]">$300<span class="text-xl text-gray-300">/mo</span></p>
-                <ul class="space-y-4 mb-12 text-lg text-gray-500">
-                    <li>🍑 Personalized workout programming</li>
-                    <li>🍑 Custom nutrition strategy</li>
-                    <li>🍑 24/7 direct messaging</li>
+    <section class="py-16 md:py-24 px-6 bg-white">
+        <div class="max-w-4xl mx-auto text-center mb-12 md:mb-20">
+            <h2 class="text-3xl md:text-5xl font-bold text-[#e9a68a] italic mb-4">Be part of the Team & Reach your Goals</h2>
+            <div class="w-16 h-1 bg-[#fce1d1] mx-auto"></div>
+        </div>
+
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            <div class="p-8 md:p-12 bg-white rounded-[30px] border border-orange-100 shadow-sm transition-transform hover:scale-105">
+                <h3 class="text-3xl font-bold mb-2">Online Coaching</h3>
+                <p class="text-sm uppercase tracking-widest text-gray-400 mb-6 italic">Psychology-backed transformation anywhere</p>
+                <div class="space-y-4 mb-10">
+                    <div class="flex justify-between items-center pb-2 border-b border-orange-50">
+                        <span class="text-gray-600">Month-to-Month</span>
+                        <span class="font-bold text-gray-800">$300/mo</span>
+                    </div>
+                    <div class="flex justify-between items-center pb-2 border-b border-orange-50">
+                        <span class="text-gray-600">3-Month Commitment</span>
+                        <span class="font-bold text-gray-800">$280/mo</span>
+                    </div>
+                    <div class="flex justify-between items-center p-3 bg-[#fdf2ed] rounded-lg">
+                        <span class="font-bold text-[#e9a68a]">6-Month Commitment</span>
+                        <span class="font-bold text-[#e9a68a]">$250/mo</span>
+                    </div>
+                </div>
+                <ul class="space-y-3 mb-10 text-base text-gray-500">
+                    <li>🍑 Mindset & Habit Coaching</li>
+                    <li>🍑 Personalized Training & Nutrition</li>
+                    <li>🍑 24/7 Support via WhatsApp</li>
                 </ul>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeJezaYh8zSdqeSnpwo3j24mQtTydxyRhsNx20S7xmfcdYUOA/viewform" target="_blank" class="block w-full py-5 bg-[#fdf2ed] text-center rounded-2xl font-bold text-gray-700 hover:bg-[#fce1d1] transition-all uppercase tracking-widest">Get Started</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeJezaYh8zSdqeSnpwo3j24mQtTydxyRhsNx20S7xmfcdYUOA/viewform" target="_blank" class="block w-full py-4 bg-[#fdf2ed] text-center rounded-2xl font-bold text-gray-700 hover:bg-[#fce1d1] transition-all uppercase tracking-widest">Start Online</a>
             </div>
-            <div class="p-12 bg-white rounded-[40px] border-2 border-[#fce1d1] shadow-xl transition-transform hover:scale-105 relative">
-                <div class="absolute -top-4 right-10 bg-[#fce1d1] text-white px-6 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Most Popular</div>
-                <h3 class="text-3xl font-bold mb-6">Hybrid Coaching</h3>
-                <p class="text-6xl font-bold mb-8 text-[#fce1d1]">$349<span class="text-xl text-gray-300">/mo</span></p>
-                <ul class="space-y-4 mb-12 text-lg text-gray-500">
-                    <li>🍑 1 in-person session/month</li>
-                    <li>🍑 Data-driven progress tracking</li>
-                    <li>🍑 Advanced athlete transition</li>
+
+            <div class="p-8 md:p-12 bg-white rounded-[30px] border-2 border-[#fce1d1] shadow-xl transition-transform hover:scale-105 relative">
+                <div class="absolute -top-3 right-6 bg-[#fce1d1] text-white px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Premium Choice</div>
+                <h3 class="text-3xl font-bold mb-2">Hybrid Coaching</h3>
+                <p class="text-sm uppercase tracking-widest text-gray-400 mb-6 italic">Elite physical coaching + mental mastery</p>
+                <div class="space-y-4 mb-10">
+                    <div class="flex justify-between items-center pb-2 border-b border-orange-50">
+                        <span class="text-gray-600">Month-to-Month</span>
+                        <span class="font-bold text-gray-800">$349/mo</span>
+                    </div>
+                    <div class="flex justify-between items-center pb-2 border-b border-orange-50">
+                        <span class="text-gray-600">3-Month Commitment</span>
+                        <span class="font-bold text-gray-800">$325/mo</span>
+                    </div>
+                    <div class="flex justify-between items-center p-3 bg-[#fce1d1] rounded-lg">
+                        <span class="font-bold text-white">6-Month Commitment</span>
+                        <span class="font-bold text-white">$310/mo</span>
+                    </div>
+                </div>
+                <ul class="space-y-3 mb-10 text-base text-gray-500">
+                    <li>🍑 Everything in Online Coaching</li>
+                    <li>🍑 1 Private In-Person Session</li>
+                    <li>🍑 Advanced Biometric Tracking</li>
                 </ul>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeJezaYh8zSdqeSnpwo3j24mQtTydxyRhsNx20S7xmfcdYUOA/viewform" target="_blank" class="block w-full py-5 bg-[#fce1d1] text-white text-center rounded-2xl font-bold hover:bg-[#e9a68a] transition-all uppercase tracking-widest">Get Started</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeJezaYh8zSdqeSnpwo3j24mQtTydxyRhsNx20S7xmfcdYUOA/viewform" target="_blank" class="block w-full py-4 bg-[#e9a68a] text-white text-center rounded-2xl font-bold hover:bg-[#d88d6d] transition-all uppercase tracking-widest">Start Hybrid</a>
             </div>
         </div>
     </section>
 
-    <footer class="py-20 text-center border-t bg-white">
-        <img src="logo.png" class="max-w-[200px] mx-auto mb-10" alt="logo">
-        <div class="mb-10">
-            <p class="text-gray-400 mb-4 italic tracking-wide">Connect with me</p>
-            <a href="https://www.instagram.com/vanna.eam" target="_blank" class="insta-btn inline-flex items-center px-10 py-4 bg-white border-2 border-[#fce1d1] text-[#e9a68a] rounded-full font-bold uppercase tracking-[0.2em] transition-all shadow-sm">
-                <i class="fab fa-instagram text-2xl mr-3"></i> @vanna.eam
-            </a>
+    <section class="py-16 md:py-20 px-6 bg-[#fffaf7]">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center text-[#e9a68a] mb-12 italic">Common Questions</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">How does commitment billing work?</h3>
+                    <p class="text-gray-500 leading-relaxed italic text-justify-custom">
+                        To make your transformation affordable, 3 and 6-month commitments are billed monthly at your special discounted rate. No massive upfront costs.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">What happens after my term?</h3>
+                    <p class="text-gray-500 leading-relaxed italic text-justify-custom">
+                        Once you complete your term, you’ll keep your discounted rate on a month-to-month basis. We’ll review your progress and set new big goals!
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Can I upgrade to Hybrid later?</h3>
+                    <p class="text-gray-500 leading-relaxed italic text-justify-custom">
+                        Absolutely. If you start Online and decide you want that 1-on-1 in-person edge in Florida, we can adjust your plan for your next billing cycle.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Why commit to 6 months?</h3>
+                    <p class="text-gray-500 leading-relaxed italic text-justify-custom">
+                        Real, sustainable physique sculpting takes time. A 6-month commitment allows us to master your metabolism and build lasting habits.
+                    </p>
+                </div>
+            </div>
         </div>
-        <p class="text-xs text-gray-400 uppercase tracking-[0.4em]">Built for Strength • Argentina Roots • Florida Based</p>
-        <p class="text-[10px] text-gray-300 mt-6 tracking-widest">© 2026 LIFT4PEACH. ALL RIGHTS RESERVED.</p>
+    </section>
+
+    <footer class="py-16 text-center border-t bg-white px-6">
+        <div class="max-w-6xl mx-auto">
+            <img src="logo.png" class="max-w-[150px] md:max-w-[200px] mx-auto mb-8" alt="logo">
+            <div class="mb-10">
+                <p class="text-gray-400 mb-4 italic tracking-wide">Connect with me</p>
+                <a href="https://www.instagram.com/vanna.eam" target="_blank" class="insta-btn inline-flex items-center px-8 md:px-10 py-3 md:py-4 bg-white border-2 border-[#fce1d1] text-[#e9a68a] rounded-full font-bold uppercase text-sm md:text-base tracking-[0.2em] transition-all shadow-sm">
+                    <i class="fab fa-instagram text-xl md:text-2xl mr-3"></i> @vanna.eam
+                </a>
+            </div>
+            <p class="text-[10px] text-gray-400 uppercase tracking-[0.3em] leading-relaxed">Built for Strength • Argentina Roots • Florida Based</p>
+            <p class="text-[9px] text-gray-300 mt-6 tracking-widest">© 2026 LIFT4PEACH. ALL RIGHTS RESERVED.</p>
+        </div>
     </footer>
 
 </body>
