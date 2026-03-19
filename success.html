@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="favicon.png">
     
-    <title>Welcome to the Team! | lift4peach</title>
+    <title>Welcome to the Team | lift4peach</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -27,103 +27,72 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            overflow-x: hidden;
-            padding: 20px 0;
         }
 
-        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        h1 { font-family: 'Playfair Display', serif; }
 
         @keyframes fadeInSlideUp {
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        @keyframes shakePeach {
-            0% { transform: rotate(0deg); }
-            25% { transform: rotate(5deg); }
-            50% { transform: rotate(0deg); }
-            75% { transform: rotate(-5deg); }
-            100% { transform: rotate(0deg); }
-        }
-
-        .animate-success { animation: fadeInSlideUp 1.2s ease-out forwards; }
-
-        .peach-shake {
-            display: inline-block;
-            animation: shakePeach 0.6s ease-in-out infinite;
-            filter: sepia(0.3) saturate(0.8) hue-rotate(-15deg) brightness(1.1);
-        }
-
-        .success-card {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
-            border: 2px solid var(--pastel-peach);
-            box-shadow: 0 20px 50px rgba(233, 166, 138, 0.2);
-            border-radius: 40px;
+        .animate-success {
+            animation: fadeInSlideUp 1s ease-out forwards;
         }
 
         .btn-animate {
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
         .btn-animate:hover {
-            transform: translateY(-5px) scale(1.02);
+            transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(233, 166, 138, 0.3);
         }
     </style>
 </head>
-<body>
+<body class="px-6">
 
-    <main class="w-full max-w-4xl px-6 animate-success">
-        <div class="success-card p-10 md:p-16 text-center">
-            
-            <img src="logo.png" class="max-w-[120px] md:max-w-[160px] mx-auto mb-10" alt="lift4peach logo">
-            
-            <h1 class="text-5xl md:text-7xl font-bold text-[#e9a68a] italic tracking-tight leading-tight mb-6">
-                Welcome to the Team! <span class="peach-shake">🍑</span>
-            </h1>
-            
-            <div class="w-20 h-1 bg-[#fce1d1] mx-auto mb-10"></div>
-            
-            <div class="space-y-6 text-xl md:text-2xl leading-relaxed italic text-gray-700 mb-12 text-center">
-                <p>Congratulations, Peach! Your spot is secured. You just made the most important investment: <strong>in yourself.</strong></p>
-                
-                <p>I am absolutely thrilled to start this journey with you. Together, we are going to sculpt not just your body, but a mindset built for sustained excellence.</p>
-            </div>
-            
-            <div class="bg-[#fdf2ed] rounded-3xl p-8 mb-12 text-left space-y-5 shadow-inner border border-orange-50">
-                <h3 class="text-2xl font-bold text-gray-800 mb-4">Your Next Steps:</h3>
-                
-                <div class="flex items-start gap-4">
-                    <i class="fas fa-envelope-open-text text-[#e9a68a] text-2xl mt-1"></i>
-                    <p class="text-lg text-gray-600"><strong>Check your Inbox:</strong> Within the next few minutes, you'll receive a confirmation email with your initial assessment questionnaire.</p>
-                </div>
-                
-                <div class="flex items-start gap-4">
-                    <i class="fas fa-clock text-[#e9a68a] text-2xl mt-1"></i>
-                    <p class="text-lg text-gray-600"><strong>Crafting your Plan:</strong> Please allow me 24-48 hours after you submit your questionnaire to design your custom program.</p>
-                </div>
-            </div>
-            
-            <div class="space-y-6">
-                <p class="text-gray-500 italic">Want to say hi and start even faster? Text me directly!</p>
-                
-                <a href="sms:+19042345279&body=Hi%20Ivanna!%20I%20just%20joined%20lift4peach%20and%20I'm%20so%20excited%20to%20start!%20My%20name%20is:" class="inline-flex items-center gap-3 px-10 py-4 bg-[#fce1d1] text-gray-800 rounded-full font-bold uppercase tracking-widest text-lg btn-animate shadow-md">
-                    <i class="fas fa-comment-dots text-2xl"></i>
-                    Text me to Start
-                </a>
-                
-                <br>
-                <a href="index.html" class="inline-block text-sm text-gray-400 hover:text-[#e9a68a] transition-colors mt-6 uppercase tracking-wider">Back to Home</a>
-            </div>
-            
+    <div class="max-w-md w-full text-center bg-white p-10 rounded-[40px] shadow-2xl border border-orange-50 animate-success relative">
+        <div class="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-lg border border-orange-50">
+            <span class="text-6xl text-[#e9a68a]">🍑</span>
         </div>
+
+        <h1 class="text-5xl font-bold text-[#e9a68a] italic mt-12 mb-2 tracking-tight">You are in!</h1>
+        <h2 class="text-2xl font-bold text-gray-700 italic mb-8">Welcome to the team, Peach!</h2>
         
-        <footer class="text-center mt-12 px-6">
-            <p class="text-[10px] text-gray-400 uppercase tracking-[0.3em] leading-relaxed">Built for Strength • Argentina Roots • Florida Based</p>
-            <p class="text-[9px] text-gray-300 mt-4 tracking-widest">© 2026 LIFT4PEACH. ALL RIGHTS RESERVED.</p>
-        </footer>
-    </main>
+        <p class="text-lg mb-8 italic text-gray-500 leading-relaxed">
+            Payment successful. Your personal transformation starts now. Please follow these steps:
+        </p>
+        
+        <div class="space-y-6 mb-10">
+            <div class="bg-[#fdf2ed] p-6 rounded-2xl border border-orange-100">
+                <p class="font-bold text-gray-700 uppercase tracking-widest text-[10px] mb-3">STEP 1: INITIAL ASSESSMENT</p>
+                <p class="text-xs text-gray-600 leading-relaxed mb-5">
+                    Fill out the form including your <strong>Experience, Allergies, and Preferences</strong>. This is essential for your customized plan.
+                </p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeJezaYh8zSdqeSnpwo3j24mQtTydxyRhsNx20S7xmfcdYUOA/viewform?usp=header" 
+                   class="block w-full py-3 bg-[#e9a68a] text-white rounded-xl font-bold uppercase tracking-widest text-xs btn-animate text-center">
+                    COMPLETE ASSESSMENT
+                </a>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-orange-100">
+                <p class="font-bold text-gray-700 uppercase tracking-widest text-[10px] mb-3">STEP 2: CONFIRM VIA WhatsApp</p>
+                <p class="text-xs text-gray-600 leading-relaxed mb-5">
+                    Once the form is sent, click here to confirm. As your coach, I will review your data within 24 hours.
+                </p>
+                <a href="https://wa.me/19042345279?text=Hi%20Ivanna!%20Just%20joined%20the%20Team.%20Assessment%20sent.%20Ready%20to%20start!" 
+                   class="block w-full py-3 bg-white border-2 border-[#fce1d1] text-[#e9a68a] rounded-xl font-bold uppercase tracking-widest text-xs btn-animate text-center inline-flex items-center justify-center gap-2">
+                    <i class="fab fa-whatsapp text-lg"></i> Send confirmation
+                </a>
+            </div>
+        </div>
+
+        <p class="text-[10px] text-gray-400 uppercase tracking-[0.2em] leading-relaxed">
+            BUILD FOR STRENGTH • TRAINING & NUTRITION • LIFT4PEACH
+        </p>
+    </div>
 
 </body>
+</html>
 </html>
