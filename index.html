@@ -69,7 +69,7 @@
             text-justify: inter-word;
         }
 
-        /* --- FILAS DE PRECIOS --- */
+        /* --- LOGICA DE SELECCIÓN DE PRECIOS --- */
         .price-row {
             transition: all 0.3s ease;
             position: relative;
@@ -81,31 +81,31 @@
             border: 2px solid transparent;
         }
 
+        /* Hover: Movimiento y color suave */
         .price-row:hover {
-            background-color: rgba(252, 225, 209, 0.2);
-            transform: translateX(8px);
+            background-color: rgba(252, 225, 209, 0.3);
+            transform: translateX(10px);
         }
 
-        /* CLASE PARA LA OPCIÓN SELECCIONADA */
-        .selected-plan {
+        /* Seleccionado: Color fijo y borde */
+        .price-row.active-plan {
             background-color: var(--pastel-peach) !important;
             border: 2px solid var(--pastel-accent);
-            transform: translateX(8px);
+            transform: translateX(10px);
         }
 
-        .selected-plan span {
-            color: #5a5a5a !important;
+        .price-row.active-plan span {
             font-weight: 800;
+            color: #4a4a4a !important;
         }
 
-        /* --- BOTONES START --- */
         .price-btn-animate {
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
         .price-btn-animate:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(233, 166, 138, 0.3);
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(233, 166, 138, 0.3);
         }
 
         .insta-btn:hover {
@@ -144,7 +144,7 @@
                 </p>
                 <div class="space-y-6 text-lg md:text-xl leading-relaxed italic text-justify-custom" style="color: var(--pastel-grey);">
                     <p>Born in the vibrant heart of <strong>Argentina</strong> and now based on the sunny shores of <strong>Florida</strong>, my path has been defined by 15 years of athletic discipline and 6 years of elite competition.</p>
-                    <p>As an <strong>IFBB Wellness Champion</strong> and a <strong>Licensed Psychologist</strong>, I understand that true transformation starts where the mind and body meet.</p>
+                    <p>As an <strong>IFBB Wellness Champion</strong> and a <strong>Licensed Psychologist</strong>, I understand that true transformation starts where the mind and body meet. I don't just build physiques; I help you navigate the mental shifts required to sustain excellence.</p>
                 </div>
             </div>
         </div>
@@ -156,13 +156,13 @@
             <div class="w-16 h-1 bg-[#fce1d1] mx-auto"></div>
         </div>
 
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 mt-16">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 mt-16">
             
-            <div class="p-8 md:p-12 bg-white rounded-[30px] border border-orange-100 shadow-sm relative" id="online-card">
+            <div class="p-8 md:p-12 bg-white rounded-[30px] border border-orange-100 shadow-sm" id="container-online">
                 <h3 class="text-3xl font-bold mb-2">Online Coaching</h3>
-                <p class="text-base text-gray-400 mb-6 italic">World-class coaching, anywhere.</p>
+                <p class="text-base text-gray-400 mb-6 italic">We train your mind and your body, no matter where you are.</p>
                 
-                <div class="space-y-3 mb-10 px-4">
+                <div class="space-y-3 mb-10 px-4 pricing-group">
                     <div onclick="selectPlan('online', 'https://buy.stripe.com/cNi14g94jeHBfdS72HgUM00', this)" class="price-row flex justify-between items-center border-b border-orange-50">
                         <span class="text-gray-600">Month-to-Month</span>
                         <span class="font-bold text-gray-800">$300/mo</span>
@@ -171,7 +171,7 @@
                         <span class="text-gray-600">3-Month Commitment</span>
                         <span class="font-bold text-gray-800">$280/mo</span>
                     </div>
-                    <div onclick="selectPlan('online', 'https://buy.stripe.com/4gM4gsbcr42XfdS86LgUM02', this)" class="price-row flex justify-between items-center selected-plan">
+                    <div onclick="selectPlan('online', 'https://buy.stripe.com/4gM4gsbcr42XfdS86LgUM02', this)" class="price-row flex justify-between items-center active-plan">
                         <span class="font-bold">6-Month Commitment</span>
                         <span class="font-bold">$250/mo</span>
                     </div>
@@ -180,13 +180,13 @@
                 <a id="btn-online" href="https://buy.stripe.com/4gM4gsbcr42XfdS86LgUM02" target="_blank" class="block w-full py-4 bg-[#fdf2ed] text-center rounded-2xl font-bold text-gray-700 uppercase tracking-widest price-btn-animate">Start Online</a>
             </div>
 
-            <div class="p-8 md:p-12 bg-white rounded-[30px] border-2 border-[#fce1d1] shadow-xl relative" id="hybrid-card">
+            <div class="p-8 md:p-12 bg-white rounded-[30px] border-2 border-[#fce1d1] shadow-xl relative" id="container-hybrid">
                 <div class="absolute -top-4 right-6 bg-[#fce1d1] text-white px-5 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-widest shadow-sm">Premium Choice</div>
                 
                 <h3 class="text-3xl font-bold mb-2">Hybrid Coaching</h3>
-                <p class="text-base text-gray-400 mb-6 italic">Online tracking + In-person sessions.</p>
+                <p class="text-base text-gray-400 mb-6 italic">Daily tracking with in-person training.</p>
                 
-                <div class="space-y-3 mb-10 px-4">
+                <div class="space-y-3 mb-10 px-4 pricing-group">
                     <div onclick="selectPlan('hybrid', 'https://buy.stripe.com/bJeaEQ4O3eHB9Tyev9gUM03', this)" class="price-row flex justify-between items-center border-b border-orange-50">
                         <span class="text-gray-600">Month-to-Month</span>
                         <span class="font-bold text-gray-800">$349/mo</span>
@@ -195,7 +195,7 @@
                         <span class="text-gray-600">3-Month Commitment</span>
                         <span class="font-bold text-gray-800">$325/mo</span>
                     </div>
-                    <div onclick="selectPlan('hybrid', 'https://buy.stripe.com/5kQbIU2FVeHBaXCcn1gUM05', this)" class="price-row flex justify-between items-center selected-plan">
+                    <div onclick="selectPlan('hybrid', 'https://buy.stripe.com/5kQbIU2FVeHBaXCcn1gUM05', this)" class="price-row flex justify-between items-center active-plan">
                         <span class="font-bold">6-Month Commitment</span>
                         <span class="font-bold">$310/mo</span>
                     </div>
@@ -206,25 +206,53 @@
         </div>
     </section>
 
+    <section class="py-16 md:py-20 px-6 bg-[#fffaf7]">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center text-[#e9a68a] mb-12 italic">Common Questions</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">What if I travel?</h3>
+                    <p class="text-gray-500 leading-relaxed italic text-justify-custom">Life happens! My coaching moves with you. I'll adjust your plan so your progress doesn't stop.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Is my payment secure?</h3>
+                    <p class="text-gray-500 leading-relaxed italic text-justify-custom">Absolutely. All payments are processed through <strong>Stripe</strong>, using bank-grade security.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="py-16 text-center border-t bg-white px-6">
-        <p class="text-[9px] text-gray-300 mt-6 tracking-widest uppercase">© 2026 LIFT4PEACH. ALL RIGHTS RESERVED.</p>
+        <div class="max-w-6xl mx-auto">
+            <img src="logo.png" class="max-w-[150px] md:max-w-[200px] mx-auto mb-8" alt="logo">
+            <div class="mb-10">
+                <a href="https://www.instagram.com/vanna.eam" target="_blank" class="insta-btn inline-flex items-center px-10 py-4 bg-white border-2 border-[#fce1d1] text-[#e9a68a] rounded-full font-bold uppercase tracking-widest transition-all">
+                    <i class="fab fa-instagram text-2xl mr-3"></i> @vanna.eam
+                </a>
+            </div>
+            <p class="text-[9px] text-gray-300 mt-6 tracking-widest">© 2026 LIFT4PEACH. ALL RIGHTS RESERVED.</p>
+        </div>
     </footer>
 
     <script>
         function selectPlan(type, url, element) {
-            // 1. Identificar el grupo (Online o Hybrid)
-            const parent = element.parentElement;
+            // 1. Identificar el contenedor (Online o Hybrid)
+            const containerId = type === 'online' ? 'container-online' : 'container-hybrid';
+            const container = document.getElementById(containerId);
             
-            // 2. Limpiar la selección previa en ese grupo
-            const allRows = parent.querySelectorAll('.price-row');
-            allRows.forEach(row => row.classList.remove('selected-plan'));
+            // 2. Limpiar la clase 'active-plan' de todas las filas en ese card
+            container.querySelectorAll('.price-row').forEach(row => {
+                row.classList.remove('active-plan');
+            });
             
-            // 3. Seleccionar el nuevo
-            element.classList.add('selected-plan');
+            // 3. Añadir la clase 'active-plan' al elemento clickeado
+            element.classList.add('active-plan');
             
-            // 4. Actualizar el botón correspondiente
+            // 4. Cambiar el href del botón Start correspondiente
             const buttonId = type === 'online' ? 'btn-online' : 'btn-hybrid';
             document.getElementById(buttonId).href = url;
+            
+            console.log("Selected plan for " + type + ": " + url); // Para depuración
         }
     </script>
 
